@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TreeGen</title>
+    
+    <script async type="application/dart" src="treegen.dart"></script>
+    <script async src="packages/browser/dart.js"></script>
+    
+    <link rel="stylesheet" href="global.css">
+  </head>
+  <body style="background:#C7B52A; height:100vh; width:100vw; text-align:center; overflow:hidden">  
+    
+    <table style="display:inline-block;">
+      <tr>
+        <td style="padding:10px 20px">
+          <h1>TreeGen</h1>
+        </td>
+      
+        <td style="text-align:right; padding:10px">
+            <span> Inital Diameter:     <input type="number" value="30.0" id="initDia"> <br> </span>
+            <span> Branching:         <input type="number" value="3.0" id="branching"> <br> </span>
+            <span> Length / Diameter:   <input type="number" value="8.0" id="lenDiaRatio"> <br> </span>
+            <span> Diameter ^ Iteration <input type="number" value="0.7" id="shrinkRatio"> <br> </span>
+            <span> Spread:     <input type="number" value="4.3" id="spread"> <br> </span>
+            <span> Shift:    <input type="number" value="-0.4" id="shift"> <br> </span>
+        </td>
+        
+        <td style="text-align:right; padding:10px">
+          <span> Delay: <input type="number" value="20" id="delay"> <br> </span>
+          <span> <br> </span>
+          <span> Seed: <input type="number" id="seed"> <br> </span>
+          <div style="text-align:center">  
+            <i id="oldSeed"></i>
+            <input type="button" value="Generate" id="gen"> 
+            <br>
+          </div>
+        </td>
+      </tr>
+    </table>
+      
+    <br>
+        
+    <canvas id="canvas"></canvas>
+          
+  </body>
+</html>
